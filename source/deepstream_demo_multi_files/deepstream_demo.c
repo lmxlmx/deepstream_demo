@@ -116,7 +116,7 @@ osd_sink_pad_buffer_probe (GstPad * pad, GstPadProbeInfo * info,
         }
       }
     }
-  }GstPadTemplate *streammux_sink_pad_template = NULL;
+  }
   g_print ("Frame Number = %d Number of objects = %d "
       "Vehicle Count = %d Person Count = %d\n",
       frame_number, num_rects, vehicle_count, person_count);
