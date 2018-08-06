@@ -53,6 +53,21 @@ def bus_call( bus, message, loop, pipline):
     return True
 
 
+def add_many(pipline, *args):
+    if pipline and args:
+        for e in args:
+            pipline.add(e)
+
+
+def link_many(*args):
+    if args:
+        length = len(args)
+        for i in range(length):
+            if i == length - 1:
+                return
+            args[i].link(args[i+1])
+
+
 def main(args):
     if len(args) !=2:
         sys.stderr.write("usage: %s <media file or uri>\n" % args[0])
@@ -88,23 +103,13 @@ def main(args):
     pgie.set_property("config-file-path", "demo_pgie_config.txt")
     nvosd.set_property("font-size", 15)
 
-
     cap1 = Gst.Caps("video/x-raw(memory:NVMM), format=NV12")
     filter1.set_property("caps", cap1)
     cap2 = Gst.Caps.from_string("video/x-raw(memory:NVMM), format=RGBA")
     filter2.set_property("caps", cap2)
 
-    for element in [source, h264parser, decoder, pgie, filter1, nvvidconv, filter2, nvosd, sink]:
-        pipeline.add(element)
-
-    source.link(h264parser)
-    h264parser.link(decoder)
-    decoder.link(pgie)
-    pgie.link(filter1)
-    filter1.link(nvvidconv)
-    nvvidconv.link(filter2)
-    filter2.link(nvosd)
-    nvosd.link(sink)
+    add_many(pipeline, source, h264parser, decoder, pgie, filter1, nvvidconv, filter2, nvosd, sink)
+    link_many(source, h264parser, decoder, pgie, filter1, nvvidconv, filter2, nvosd, sink)
 
     bus = pipeline.get_bus()
     bus.add_signal_watch()

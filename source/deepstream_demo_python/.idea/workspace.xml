@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2bc0964e-76bb-4f4c-b886-1d0a2bacd9fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../models/Primary_Detector/resnet10.caffemodel_b1_int8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/Primary_Detector/resnet10.caffemodel_b1_int8.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../models/Primary_Detector/resnet10.caffemodel_b4_int8.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../../models/Primary_Detector/resnet10.caffemodel_b4_int8.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deepstream_demo_multi_files/deepstream_demo.c" beforeDir="false" afterPath="$PROJECT_DIR$/../deepstream_demo_multi_files/deepstream_demo.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gstreamer_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/deepstream_demo.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +35,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3655" />
+          <entry key="py" value="3938" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3655" />
+          <entry key="Python" value="3938" />
         </counts>
       </usages-collector>
     </session>
@@ -49,20 +48,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gstreamer_demo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-              <folding>
-                <element signature="e#34#44#0" expanded="true" />
-                <marker date="1533543246659" expanded="true" signature="443:653" ph="..." />
-                <marker date="1533543246659" expanded="true" signature="1783:4622" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib/python3/dist-packages/gi/overrides/GObject.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="262">
@@ -99,7 +84,7 @@
         <entry file="file:///usr/lib/python3/dist-packages/gi/overrides/Gst.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="286">
-              <caret line="340" column="31" selection-start-line="340" selection-start-column="29" selection-end-line="340" selection-end-column="31" />
+              <caret line="218" column="9" selection-start-line="218" selection-start-column="6" selection-end-line="218" selection-end-column="9" />
               <folding>
                 <element signature="e#1140#1150#0" expanded="true" />
               </folding>
@@ -147,7 +132,6 @@
     <findStrings>
       <find>print</find>
       <find>p</find>
-      <find>pip</find>
       <find>set</find>
       <find>g_object_set</find>
       <find>pipeline</find>
@@ -175,6 +159,7 @@
       <find>main</find>
       <find>log</find>
       <find>le</find>
+      <find>pip</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -418,13 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/gi/overrides/GObject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/lib/python3/dist-packages/gi/overrides/GstPbutils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-614" />
@@ -440,7 +418,7 @@
     <entry file="file:///usr/lib/python3/dist-packages/gi/overrides/Gst.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
-          <caret line="340" column="31" selection-start-line="340" selection-start-column="29" selection-end-line="340" selection-end-column="31" />
+          <caret line="218" column="9" selection-start-line="218" selection-start-column="6" selection-end-line="218" selection-end-column="9" />
           <folding>
             <element signature="e#1140#1150#0" expanded="true" />
           </folding>
@@ -449,13 +427,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gstreamer_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="716">
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="23" selection-end-line="110" selection-end-column="23" />
           <folding>
             <element signature="e#34#44#0" expanded="true" />
-            <marker date="1533543246659" expanded="true" signature="443:653" ph="..." />
-            <marker date="1533543246659" expanded="true" signature="1783:4622" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/gi/overrides/GObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="18" />
         </state>
       </provider>
     </entry>
