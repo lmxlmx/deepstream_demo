@@ -3,7 +3,8 @@
 
 import sys
 import random
-import  gi
+import gi
+import deepstream_demopy
 
 gi.require_version('Gst', '1.0')
 gi.require_version('GstBase', '1.0')
@@ -18,13 +19,8 @@ nvdsmeta_quark = 0
 
 
 def osd_sink_pad_buffer_probe(pad, info):
-    global nvdsmeta_quark
-    if not nvdsmeta_quark:
-        nvdsmeta_quark = GLib.quark_from_static_string("nvdsmeta")
-    global frame_number
-    sys.stdout.write("Frame Number = %d\n" % frame_number)
-    frame_number += 1
-    return Gst.PadProbeReturn.OK
+    return deepstream_demopy.callCfunc(info.data)
+
 
 
 

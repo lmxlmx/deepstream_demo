@@ -1,0 +1,15 @@
+(1) Build python lib
+	sudo rm deepstream_demopy.cpython-35m-x86_64-linux-gnu.so
+	sudo python setup.py clean
+	sudo python setup.py build_ext --inplace
+(2)Use python lib
+        sudo cp deepstream_demopy.cpython-35m-x86_64-linux-gnu.so ../deepstream_demo_python/
+        
+        Then you can change your python code to import the lib:        
+	import deepstream_demopy
+ 
+then do what you want to do
+
+        
+
+
